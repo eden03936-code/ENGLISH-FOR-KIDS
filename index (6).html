@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="English Fun">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,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">
+<title>English Fun for Kids</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #D0B4EE;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  overflow: hidden;
+}
+html { height: 100%; }
+#app {
+  width: 100%;
+  max-width: 430px;
+  height: 100vh;
+  background: #FDF4FF;
+  position: relative;
+  overflow: hidden;
+}
+.screen {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.fredoka { font-family: 'Fredoka One', cursive; }
+
+/* BUTTONS */
+.btn {
+  display: block; width: 100%; max-width: 320px;
+  margin: 0 auto; padding: 16px; border-radius: 99px;
+  border: none; font-family: 'Nunito', sans-serif;
+  font-size: 19px; font-weight: 900; cursor: pointer;
+  text-align: center; letter-spacing: .3px;
+}
+.btn:active { transform: scale(.92); opacity: .8; }
+.btn-rose { background: #FF5FA0; color: #fff; box-shadow: 0 7px 22px rgba(255,95,160,.45); }
+.btn-violet { background: #9B5DE5; color: #fff; box-shadow: 0 7px 22px rgba(155,93,229,.45); }
+.btn-outline { background: #fff; border: 3px solid #FF5FA0 !important; color: #FF5FA0; }
+
+/* PROGRESS */
+.pbar { width: 100%; height: 9px; background: #EDE0F8; border-radius: 99px; overflow: hidden; }
+.pbar-fill { height: 100%; border-radius: 99px; transition: width .5s ease; }
+
+/* ICON BTN */
+.ibtn {
+  width: 44px; height: 44px; border-radius: 14px;
+  background: #fff; border: 2.5px solid #EDE0F8;
+  font-size: 20px; display: flex; align-items: center;
+  justify-content: center; cursor: pointer; flex-shrink: 0;
+}
+.ibtn:active { transform: scale(.88); }
+
+/* SOUND BTN */
+.sbtn {
+  border-radius: 50%; border: 3px solid currentColor;
+  background: #fff; font-size: 22px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0;
+}
+.sbtn:active { transform: scale(.88); }
+
+/* TOPBAR */
+.topbar { display: flex; align-items: center; gap: 10px; padding: 14px 18px 10px; flex-shrink: 0; }
+
+/* QUIZ OPTIONS */
+.qopt {
+  display: flex; align-items: center;
+  background: #fff; border: 3.5px solid #EDE0F8;
+  border-radius: 22px; overflow: hidden;
+  cursor: pointer; width: 100%;
+  transition: background .2s, border-color .2s, opacity .2s;
+}
+.qopt:active { transform: scale(.97); }
+.qopt.correct { background: #E6FAF0; border-color: #32CD78; }
+.qopt.wrong { background: #FFF0F2; border-color: #FF4F6E; animation: shake .3s ease; }
+.qopt.dim { opacity: .3; }
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: 30px; left: 50%;
+  transform: translateX(-50%);
+  border-radius: 99px; padding: 13px 26px;
+  font-size: 17px; font-weight: 900; color: #fff;
+  white-space: nowrap; z-index: 999;
+  animation: toastIn .25s ease;
+}
+.toast.good { background: #32CD78; }
+.toast.bad  { background: #FF5FA0; }
+
+/* CORRECT OVERLAY */
+#cover-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+}
+.cover-card {
+  background: #fff; border: 4px solid #32CD78;
+  border-radius: 28px; padding: 30px 36px;
+  text-align: center;
+  box-shadow: 0 16px 50px rgba(50,205,120,.35);
+  animation: popIn .4s ease;
+}
+
+/* CONFETTI */
+#confetti { position: fixed; inset: 0; pointer-events: none; z-index: 400; overflow: hidden; }
+
+/* CATEGORY GRID */
+.cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 0 16px 36px; }
+.cat-card {
+  background: #fff; border-radius: 24px;
+  padding: 18px 12px 14px; text-align: center;
+  cursor: pointer; border: 3.5px solid #eee;
+  transition: transform .12s; position: relative;
+}
+.cat-card:active { transform: scale(.93); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  border-radius: 99px; padding: 5px 12px;
+  font-size: 13px; font-weight: 800;
+}
+
+/* ANIMATIONS */
+@keyframes popIn    { 0%{opacity:0;transform:scale(.3) rotate(-10deg)} 70%{transform:scale(1.12) rotate(3deg)} 100%{opacity:1;transform:scale(1)} }
+@keyframes riseUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes bounce   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+@keyframes wiggle   { 0%,100%{transform:rotate(-8deg) scale(1.04)} 50%{transform:rotate(8deg) scale(1.04)} }
+@keyframes starPop  { 0%{opacity:0;transform:scale(0) rotate(-40deg)} 65%{transform:scale(1.3) rotate(6deg)} 100%{opacity:1;transform:scale(1)} }
+@keyframes confFall { to{transform:translateY(110vh) rotate(580deg);opacity:0} }
+@keyframes toastIn  { from{opacity:0;transform:translate(-50%,12px)} to{opacity:1;transform:translate(-50%,0)} }
+@keyframes pulse    { 0%{box-shadow:0 0 0 0 rgba(255,95,160,.5)} 100%{box-shadow:0 0 0 18px rgba(255,95,160,0)} }
+@keyframes shake    { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-9px)} 75%{transform:translateX(9px)} }
+@keyframes heartbeat { 0%,100%{transform:scale(1)} 14%{transform:scale(1.18)} 42%{transform:scale(1.1)} }
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- WELCOME -->
+<div id="s-welcome" class="screen active" style="background:linear-gradient(165deg,#FFE4F4 0%,#EDE0FF 52%,#DFF4FF 100%);align-items:center;justify-content:center;text-align:center;padding:0 32px;gap:0">
+  <div style="display:flex;gap:20px;font-size:28px;margin-bottom:14px">
+    <span style="animation:bounce 2s 0s infinite">🌸</span>
+    <span style="animation:bounce 2s .25s infinite">🌟</span>
+    <span style="animation:bounce 2s .5s infinite">🌈</span>
+    <span style="animation:bounce 2s .75s infinite">🎀</span>
+  </div>
+  <div style="font-size:118px;line-height:1;margin-bottom:12px;animation:wiggle 2.8s infinite;filter:drop-shadow(0 8px 24px rgba(155,93,229,.4))">🦄</div>
+  <div class="fredoka" style="font-size:34px;color:#FF5FA0;line-height:1.15;margin-bottom:8px;text-shadow:0 3px 18px rgba(255,95,160,.35)">Let's Learn English!</div>
+  <div style="font-size:16px;font-weight:700;color:#7C5EA8;margin-bottom:40px">Learn words · Play games · Have fun! ✨</div>
+  <button class="btn btn-rose" style="max-width:260px;font-size:22px;padding:20px;animation:pulse 2s infinite" onclick="showHome()">⭐  Start Learning</button>
+  <div style="font-size:13px;font-weight:700;color:#7C5EA8;margin-top:18px;opacity:.6">Tap to begin! 🎀</div>
+</div>
+
+<!-- HOME -->
+<div id="s-home" class="screen" style="background:linear-gradient(180deg,#FFF0F8 0%,#F7EEFF 100%);overflow-y:auto">
+  <div style="background:linear-gradient(135deg,#FF5FA0,#9B5DE5);padding:22px 20px 20px;border-radius:0 0 28px 28px;flex-shrink:0">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+      <div style="width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:26px">🌟</div>
+      <div>
+        <div class="fredoka" style="font-size:21px;color:#fff">English Fun for Kids</div>
+        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.8)">Learn 3 words → play a quiz! 🎮</div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.18);border-radius:16px;padding:12px 14px">
+      <div style="display:flex;justify-content:space-between;margin-bottom:7px">
+        <span style="font-size:12px;font-weight:800;color:rgba(255,255,255,.9)">Overall Progress</span>
+        <span id="home-pct" style="font-size:12px;font-weight:900;color:#FFD54F">0%</span>
+      </div>
+      <div class="pbar"><div id="home-pbar" class="pbar-fill" style="width:0%;background:#FFD54F"></div></div>
+      <div id="home-count" style="font-size:11px;font-weight:700;color:rgba(255,255,255,.7);margin-top:5px">0 / 80 words learned 🎉</div>
+    </div>
+  </div>
+  <div style="padding:16px 0 4px 20px;font-size:14px;font-weight:800;color:#7C5EA8">📚 All Lessons</div>
+  <div id="cat-grid" class="cat-grid"></div>
+</div>
+
+<!-- WORD -->
+<div id="s-word" class="screen">
+  <div class="topbar">
+    <button class="ibtn" onclick="goHome()">🏠</button>
+    <div style="flex:1">
+      <div class="pbar"><div id="word-pbar" class="pbar-fill" style="width:0%"></div></div>
+      <div id="word-lbl" style="font-size:11px;font-weight:700;color:#7C5EA8;margin-top:3px">Word 1 of 10</div>
+    </div>
+    <div id="word-badge" class="fredoka" style="font-size:13px;border-radius:99px;padding:4px 12px"></div>
+  </div>
+  <div style="text-align:center;padding:0 0 10px">
+    <span id="word-pill" class="fredoka" style="font-size:14px;border-radius:99px;padding:5px 16px"></span>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:0 22px">
+    <div id="word-card" style="background:#fff;border-radius:32px;padding:28px 20px 24px;text-align:center;width:100%;max-width:340px;border:4px solid #FF5FA0;box-shadow:0 16px 50px rgba(255,95,160,.2)">
+      <div id="wc-e" style="font-size:100px;line-height:1.05;margin-bottom:12px">🔴</div>
+      <div id="wc-en" class="fredoka" style="font-size:40px;color:#2D1B4E;margin-bottom:4px">Red</div>
+      <div id="wc-he" style="font-size:20px;font-weight:700;color:#7C5EA8;direction:rtl;margin-bottom:20px">אדום</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+        <button id="wc-snd" class="sbtn" style="width:58px;height:58px;color:#FF5FA0" onclick="playWord()">🔊</button>
+        <span id="wc-hint" style="font-size:13px;font-weight:700;color:#7C5EA8">Tap to hear! 👆</span>
+      </div>
+    </div>
+  </div>
+  <div style="padding:18px 22px 36px;display:flex;justify-content:center">
+    <button id="word-next" class="btn btn-rose" onclick="wordNext()">Next Word ➡️</button>
+  </div>
+</div>
+
+<!-- TRANSITION -->
+<div id="s-transition" class="screen" style="align-items:center;justify-content:center;text-align:center;padding:0 28px">
+  <div id="tr-badge" class="fredoka" style="border-radius:24px;padding:10px 24px;font-size:13px;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px">Quiz #1 🎯</div>
+  <div style="font-size:96px;margin-bottom:8px;animation:heartbeat 1.4s infinite">🎮</div>
+  <div id="tr-title" class="fredoka" style="font-size:36px;margin-bottom:10px">Game Time! 🎉</div>
+  <div style="font-size:16px;font-weight:700;color:#7C5EA8">Let's see what you remember!</div>
+  <div style="display:flex;gap:8px;margin-top:24px" id="tr-dots">
+    <div style="width:12px;height:12px;border-radius:50%;animation:bounce 1s 0s infinite"></div>
+    <div style="width:12px;height:12px;border-radius:50%;animation:bounce 1s .2s infinite"></div>
+    <div style="width:12px;height:12px;border-radius:50%;animation:bounce 1s .4s infinite"></div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="s-quiz" class="screen">
+  <div class="topbar">
+    <button class="ibtn" onclick="goHome()">🏠</button>
+    <div style="flex:1">
+      <div class="pbar"><div id="quiz-pbar" class="pbar-fill" style="width:0%"></div></div>
+      <div id="quiz-sub" style="font-size:11px;font-weight:700;color:#7C5EA8;margin-top:3px">Question 1 of 3</div>
+    </div>
+    <div id="quiz-sc" class="fredoka" style="font-size:15px;color:#fff;border-radius:99px;padding:4px 14px;white-space:nowrap">⭐ 0</div>
+  </div>
+  <div style="text-align:center;padding:4px 20px 14px">
+    <div style="font-size:14px;font-weight:800;color:#7C5EA8;margin-bottom:10px">👆 Tap the correct picture!</div>
+    <div id="quiz-q" style="display:inline-flex;align-items:center;gap:14px;background:#fff;border-radius:99px;padding:11px 22px;border:3.5px solid #FF5FA0;box-shadow:0 5px 18px rgba(255,95,160,.2)">
+      <span id="quiz-qt" class="fredoka" style="font-size:24px;color:#2D1B4E">Where is Red?</span>
+      <button id="quiz-snd" class="sbtn" style="width:40px;height:40px;color:#FF5FA0" onclick="playQuizWord()">🔊</button>
+    </div>
+  </div>
+  <div id="quiz-opts" style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 18px;gap:12px"></div>
+  <div style="height:28px"></div>
+</div>
+
+<!-- REWARD -->
+<div id="s-reward" class="screen" style="background:linear-gradient(160deg,#FFE6F4 0%,#EDE0FF 55%,#DFFAFF 100%);align-items:center;justify-content:center;text-align:center;padding:0 32px">
+  <div id="rw-star" style="font-size:114px;margin-bottom:8px;animation:popIn .6s both">🌟</div>
+  <div id="rw-msg" class="fredoka" style="font-size:36px;color:#FF5FA0;margin-bottom:10px;text-shadow:0 4px 20px rgba(255,95,160,.4)">Amazing! ✨</div>
+  <div style="font-size:17px;font-weight:700;color:#7C5EA8;margin-bottom:30px">You finished the whole lesson! 🎀</div>
+  <div style="font-size:54px;margin-bottom:32px;animation:bounce 1.8s infinite">🦋</div>
+  <button class="btn btn-rose" style="max-width:280px;font-size:20px;padding:19px" onclick="showSummary()">See my results ➡️</button>
+</div>
+
+<!-- SUMMARY -->
+<div id="s-summary" class="screen" style="background:linear-gradient(165deg,#FFF0F8 0%,#F5EEFF 100%);overflow-y:auto">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:32px 22px 44px">
+    <div id="sum-title" class="fredoka" style="font-size:26px;color:#FF5FA0;text-align:center;margin-bottom:4px">Lesson complete! 🎉</div>
+    <div id="sum-cat" style="font-size:15px;font-weight:700;color:#7C5EA8;margin-bottom:18px"></div>
+    <div id="sum-stars" style="display:flex;gap:12px;justify-content:center;margin-bottom:10px"></div>
+    <div id="sum-score" style="font-size:14px;font-weight:800;color:#7C5EA8;margin-bottom:20px"></div>
+    <div style="background:#fff;border-radius:26px;padding:18px;border:3px solid #EDE0F8;width:100%;max-width:380px;margin-bottom:16px">
+      <div class="fredoka" style="font-size:15px;color:#7C5EA8;margin-bottom:12px">📝 Words you learned:</div>
+      <div id="sum-chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+    </div>
+    <div style="background:linear-gradient(135deg,#FFF0F6,#F5EEFF);border-radius:20px;padding:16px 24px;border:3px solid #FFB3CF;width:100%;max-width:380px;margin-bottom:26px;text-align:center">
+      <div style="font-size:13px;font-weight:700;color:#7C5EA8;margin-bottom:4px">Remember this 💜</div>
+      <div id="sum-conf" class="fredoka" style="font-size:22px;color:#9B5DE5"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:360px">
+      <button id="sum-again" class="btn" onclick="playAgain()">🔄  Play again</button>
+      <button class="btn btn-violet" onclick="nextLesson()">⏭  Next lesson</button>
+      <button class="btn btn-outline" onclick="goHome()">🏠  Back to home</button>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAYS -->
+<div id="confetti"></div>
+<div id="toast" style="display:none"></div>
+<div id="cover-overlay" style="display:none;position:fixed;inset:0;z-index:500;align-items:center;justify-content:center;pointer-events:none">
+  <div class="cover-card">
+    <div style="font-size:64px;margin-bottom:8px;animation:heartbeat 1.2s infinite">⭐</div>
+    <div id="co-msg" class="fredoka" style="font-size:30px;color:#32CD78;margin-bottom:6px"></div>
+    <div id="co-word" style="font-size:15px;font-weight:700;color:#7C5EA8"></div>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script>
+// Fix height for all mobile browsers
+function setH() {
+  var h = window.innerHeight;
+  document.getElementById('app').style.height = h + 'px';
+}
+setH();
+window.addEventListener('resize', setH);
+
+// DATA
+var CATS = [
+  {id:"colors",   label:"Colors",     icon:"🌈", ac:"#FF5FA0", bg:"#FFF0F6", words:[
+    {en:"Red",he:"אדום",e:"🔴"},{en:"Blue",he:"כחול",e:"🔵"},{en:"Yellow",he:"צהוב",e:"🟡"},
+    {en:"Green",he:"ירוק",e:"🟢"},{en:"Pink",he:"ורוד",e:"🩷"},{en:"Orange",he:"כתום",e:"🟠"},
+    {en:"Purple",he:"סגול",e:"🟣"},{en:"Black",he:"שחור",e:"⚫"},{en:"White",he:"לבן",e:"⚪"},{en:"Brown",he:"חום",e:"🟤"}
+  ]},
+  {id:"animals",  label:"Animals",    icon:"🐾", ac:"#FF7B54", bg:"#FFF2EE", words:[
+    {en:"Dog",he:"כלב",e:"🐶"},{en:"Cat",he:"חתול",e:"🐱"},{en:"Lion",he:"אריה",e:"🦁"},
+    {en:"Elephant",he:"פיל",e:"🐘"},{en:"Bird",he:"ציפור",e:"🐦"},{en:"Fish",he:"דג",e:"🐟"},
+    {en:"Monkey",he:"קוף",e:"🐵"},{en:"Bear",he:"דוב",e:"🐻"},{en:"Cow",he:"פרה",e:"🐮"},{en:"Horse",he:"סוס",e:"🐴"}
+  ]},
+  {id:"numbers",  label:"Numbers",    icon:"🔢", ac:"#38CFB8", bg:"#EBFDF9", words:[
+    {en:"One",he:"אחד",e:"1️⃣"},{en:"Two",he:"שתיים",e:"2️⃣"},{en:"Three",he:"שלוש",e:"3️⃣"},
+    {en:"Four",he:"ארבע",e:"4️⃣"},{en:"Five",he:"חמש",e:"5️⃣"},{en:"Six",he:"שש",e:"6️⃣"},
+    {en:"Seven",he:"שבע",e:"7️⃣"},{en:"Eight",he:"שמונה",e:"8️⃣"},{en:"Nine",he:"תשע",e:"9️⃣"},{en:"Ten",he:"עשר",e:"🔟"}
+  ]},
+  {id:"food",     label:"Food",       icon:"🍎", ac:"#FFC43D", bg:"#FFFBEC", words:[
+    {en:"Apple",he:"תפוח",e:"🍎"},{en:"Banana",he:"בננה",e:"🍌"},{en:"Bread",he:"לחם",e:"🍞"},
+    {en:"Milk",he:"חלב",e:"🥛"},{en:"Egg",he:"ביצה",e:"🥚"},{en:"Water",he:"מים",e:"💧"},
+    {en:"Cheese",he:"גבינה",e:"🧀"},{en:"Juice",he:"מיץ",e:"🧃"},{en:"Cake",he:"עוגה",e:"🎂"},{en:"Orange",he:"תפוז",e:"🍊"}
+  ]},
+  {id:"family",   label:"Family",     icon:"👨‍👩‍👧", ac:"#9B5DE5", bg:"#F5EEFF", words:[
+    {en:"Mom",he:"אמא",e:"👩"},{en:"Dad",he:"אבא",e:"👨"},{en:"Brother",he:"אח",e:"👦"},
+    {en:"Sister",he:"אחות",e:"👧"},{en:"Baby",he:"תינוק",e:"👶"},{en:"Grandma",he:"סבתא",e:"👵"},
+    {en:"Grandpa",he:"סבא",e:"👴"},{en:"Family",he:"משפחה",e:"👨‍👩‍👧‍👦"}
+  ]},
+  {id:"body",     label:"Body Parts", icon:"🫀", ac:"#3BADFF", bg:"#EBF6FF", words:[
+    {en:"Head",he:"ראש",e:"🗣️"},{en:"Eyes",he:"עיניים",e:"👀"},{en:"Nose",he:"אף",e:"👃"},
+    {en:"Mouth",he:"פה",e:"👄"},{en:"Ears",he:"אוזניים",e:"👂"},{en:"Hand",he:"יד",e:"✋"},
+    {en:"Legs",he:"רגליים",e:"🦵"},{en:"Feet",he:"כפות רגליים",e:"🦶"}
+  ]},
+  {id:"shapes",   label:"Shapes",     icon:"⭐", ac:"#FF9ECD", bg:"#FFF5FA", words:[
+    {en:"Circle",he:"עיגול",e:"⭕"},{en:"Square",he:"ריבוע",e:"🟦"},{en:"Triangle",he:"משולש",e:"🔺"},
+    {en:"Star",he:"כוכב",e:"⭐"},{en:"Heart",he:"לב",e:"❤️"},{en:"Rectangle",he:"מלבן",e:"🔲"}
+  ]},
+  {id:"class",    label:"Classroom",  icon:"📚", ac:"#72CC52", bg:"#F1FAEB", words:[
+    {en:"Book",he:"ספר",e:"📚"},{en:"Pencil",he:"עיפרון",e:"✏️"},{en:"Pen",he:"עט",e:"🖊️"},
+    {en:"Bag",he:"תיק",e:"🎒"},{en:"Chair",he:"כיסא",e:"🪑"},{en:"Table",he:"שולחן",e:"🪞"},
+    {en:"Eraser",he:"מחק",e:"🧽"},{en:"Notebook",he:"מחברת",e:"📓"}
+  ]}
+];
+
+var PRAISE = ["Good job! 🌟","Amazing! ✨","Well done! 🎉","Super! 💫","You rock! 🌈","Brilliant! 🦄","Fantastic! 🎀","Perfect! 👑"];
+var CONF   = ["I am smart 🧠","I can learn 📚","I am amazing ⭐","I can do it 💪","I love English 💜","I am a star 🌟"];
+var QT     = [function(w){return "Where is "+w+"?"},function(w){return "Find "+w+"! 👆"},function(w){return "Tap "+w+"! 🎯"},function(w){return "Which one is "+w+"?"}];
+
+function shuffle(a){return a.slice().sort(function(){return Math.random()-.5});}
+function pick(a,n){return shuffle(a).slice(0,n);}
+function rand(a){return a[Math.floor(Math.random()*a.length)];}
+
+function speak(t){
+  if(!window.speechSynthesis)return;
+  window.speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(t);
+  u.lang="en-US";u.rate=0.76;u.pitch=1.3;u.volume=1;
+  window.speechSynthesis.speak(u);
+}
+
+function buildSteps(words){
+  var s=[];
+  for(var i=0;i<words.length;i++){
+    s.push({type:"word",word:words[i],idx:i});
+    if((i+1)%3===0){
+      var batch=words.slice(Math.max(0,i-2),i+1);
+      s.push({type:"quiz",batch:batch,qi:Math.floor(i/3)});
+    }
+  }
+  return s;
+}
+
+// STATE
+var progress={};
+var curCat=null,steps=[],stepIdx=0,phase="word";
+var quizBatch=[],quizQIdx=0,quizScore=0,totalCorrect=0,quizCount=0,wordCount=0;
+var trTimer=null,toastTimer=null,confTimer=null;
+var curQWord=null,quizLocked=false;
+
+function show(id){
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+}
+
+// CONFETTI
+function fireConfetti(){
+  var el=document.getElementById('confetti');
+  el.innerHTML='';
+  var colors=['#FF5FA0','#FFD54F','#38CFB8','#C4AAFF','#9B5DE5','#FF9ECD','#FFA94D'];
+  for(var i=0;i<28;i++){
+    var d=document.createElement('div');
+    var size=8+Math.random()*13;
+    var x=Math.random()*100;
+    var delay=Math.random()*.8;
+    var dur=1.4+Math.random()*.9;
+    var br=['50%','4px','50% 0 50% 50%'][i%3];
+    d.style.cssText='position:absolute;left:'+x+'%;top:-20px;width:'+size+'px;height:'+size+'px;background:'+colors[i%7]+';border-radius:'+br+';animation:confFall '+dur+'s '+delay+'s ease-in forwards;transform:rotate('+Math.round(Math.random()*360)+'deg)';
+    el.appendChild(d);
+  }
+  if(confTimer)clearTimeout(confTimer);
+  confTimer=setTimeout(function(){el.innerHTML='';},3500);
+}
+
+function showToast(msg,type,ms){
+  var el=document.getElementById('toast');
+  el.textContent=msg;el.className='toast '+type;el.style.display='block';
+  if(toastTimer)clearTimeout(toastTimer);
+  toastTimer=setTimeout(function(){el.style.display='none';},ms||1200);
+}
+
+// HOME
+function showHome(){
+  buildGrid();updateProgress();show('s-home');
+}
+function goHome(){if(trTimer)clearTimeout(trTimer);showHome();}
+
+function buildGrid(){
+  var grid=document.getElementById('cat-grid');
+  grid.innerHTML='';
+  CATS.forEach(function(cat,i){
+    var learned=progress[cat.id]||0;
+    var total=cat.words.length;
+    var pct=total>0?(learned/total)*100:0;
+    var btn=document.createElement('button');
+    btn.className='cat-card';
+    btn.style.background=cat.bg;
+    btn.style.borderColor=cat.ac;
+    btn.style.boxShadow='0 6px 20px '+cat.ac+'44';
+    var doneHtml=(learned>=total)?'<div style="position:absolute;top:8px;right:10px;font-size:15px">✅</div>':'';
+    btn.innerHTML=doneHtml+
+      '<div style="font-size:40px;margin-bottom:8px">'+cat.icon+'</div>'+
+      '<div class="fredoka" style="font-size:15px;color:#2D1B4E;margin-bottom:7px;line-height:1.2">'+cat.label+'</div>'+
+      '<div class="pbar"><div class="pbar-fill" style="width:'+pct+'%;background:'+cat.ac+'"></div></div>'+
+      '<div style="font-size:11px;font-weight:800;color:'+cat.ac+';margin-top:5px">'+learned+'/'+total+' words</div>';
+    btn.onclick=function(){startLesson(cat);};
+    grid.appendChild(btn);
+  });
+}
+
+function updateProgress(){
+  var totalW=CATS.reduce(function(s,c){return s+c.words.length;},0);
+  var learnedW=CATS.reduce(function(s,c){return s+(progress[c.id]||0);},0);
+  var pct=Math.round(learnedW/totalW*100);
+  document.getElementById('home-pbar').style.width=pct+'%';
+  document.getElementById('home-pct').textContent=pct+'%';
+  document.getElementById('home-count').textContent=learnedW+' / '+totalW+' words learned 🎉';
+}
+
+// LESSON
+function startLesson(cat){
+  curCat=cat;steps=buildSteps(cat.words);
+  stepIdx=0;phase="word";quizScore=0;totalCorrect=0;
+  wordCount=steps.filter(function(s){return s.type==="word";}).length;
+  quizCount=steps.filter(function(s){return s.type==="quiz";}).length;
+  renderStep();
+}
+
+function renderStep(){
+  var step=steps[stepIdx];
+  if(!step){finishLesson();return;}
+  if(phase==="transition") showTransition();
+  else if(phase==="word"&&step.type==="word") showWordCard(step);
+  else if(phase==="quiz"&&step.type==="quiz") showQuiz(step.batch,step.qi);
+}
+
+function showWordCard(step){
+  var w=step.word,cat=curCat;
+  var pct=((stepIdx+1)/steps.length)*100;
+  document.getElementById('word-pbar').style.width=pct+'%';
+  document.getElementById('word-pbar').style.background=cat.ac;
+  document.getElementById('word-lbl').textContent='Word '+(step.idx+1)+' of '+wordCount;
+  document.getElementById('word-badge').textContent=cat.icon+' '+cat.label;
+  document.getElementById('word-badge').style.cssText='font-size:13px;border-radius:99px;padding:4px 12px;background:'+cat.ac+'18;color:'+cat.ac+';font-family:"Fredoka One",cursive';
+  document.getElementById('word-pill').textContent=cat.icon+' '+cat.label;
+  document.getElementById('word-pill').style.cssText='font-size:14px;border-radius:99px;padding:5px 16px;background:'+cat.ac+'18;color:'+cat.ac+';font-family:"Fredoka One",cursive';
+  document.getElementById('wc-e').textContent=w.e;
+  document.getElementById('wc-en').textContent=w.en;
+  document.getElementById('wc-he').textContent=w.he;
+  document.getElementById('wc-hint').style.opacity='1';
+  var card=document.getElementById('word-card');
+  card.style.borderColor=cat.ac;
+  card.style.boxShadow='0 16px 50px '+cat.ac+'28';
+  document.getElementById('wc-snd').style.color=cat.ac;
+  var nb=document.getElementById('word-next');
+  nb.textContent=(stepIdx===steps.length-1)?'Finish Lesson! 🎊':'Next Word ➡️';
+  nb.style.background=cat.ac;nb.style.boxShadow='0 7px 22px '+cat.ac+'55';
+  show('s-word');
+  setTimeout(function(){speak(w.en);},380);
+}
+
+function playWord(){
+  var step=steps[stepIdx];
+  if(step&&step.word){speak(step.word.en);document.getElementById('wc-hint').style.opacity='.3';}
+}
+
+function wordNext(){
+  var nextIdx=stepIdx+1;
+  if(nextIdx>=steps.length){finishLesson();return;}
+  if(steps[nextIdx].type==="quiz"){phase="transition";renderStep();}
+  else{stepIdx=nextIdx;phase="word";renderStep();}
+}
+
+function showTransition(){
+  var nextStep=steps[stepIdx+1];
+  var qNum=(nextStep?nextStep.qi:0)+1;
+  var cat=curCat;
+  var badge=document.getElementById('tr-badge');
+  badge.textContent='Quiz #'+qNum+' 🎯';
+  badge.style.background='linear-gradient(135deg,'+cat.ac+',#9B5DE5)';
+  badge.style.boxShadow='0 6px 20px '+cat.ac+'55';
+  document.getElementById('tr-title').style.color=cat.ac;
+  document.getElementById('s-transition').style.background='linear-gradient(155deg,'+cat.bg+' 0%,'+cat.ac+'22 50%,#EDE0FF 100%)';
+  var dots=document.querySelectorAll('#tr-dots div');
+  dots.forEach(function(d){d.style.background=cat.ac;});
+  show('s-transition');
+  if(trTimer)clearTimeout(trTimer);
+  trTimer=setTimeout(function(){stepIdx+=1;phase="quiz";renderStep();},2600);
+}
+
+function showQuiz(batch,qi){
+  quizBatch=batch;quizQIdx=0;quizScore=0;quizLocked=false;
+  showQuizQ();
+}
+
+function showQuizQ(){
+  var cat=curCat;
+  curQWord=quizBatch[quizQIdx];quizLocked=false;
+  var qt=rand(QT);
+  var pct=(quizQIdx/quizBatch.length)*100;
+  document.getElementById('quiz-pbar').style.width=pct+'%';
+  document.getElementById('quiz-pbar').style.background=cat.ac;
+  document.getElementById('quiz-sub').textContent='Question '+(quizQIdx+1)+' of '+quizBatch.length;
+  var sc=document.getElementById('quiz-sc');
+  sc.textContent='⭐ '+quizScore;sc.style.background=cat.ac;
+  document.getElementById('quiz-qt').textContent=qt(curQWord.en);
+  document.getElementById('quiz-q').style.borderColor=cat.ac;
+  document.getElementById('quiz-snd').style.color=cat.ac;
+  var others=cat.words.filter(function(w){return w.en!==curQWord.en;});
+  var opts=shuffle([curQWord].concat(pick(others,2)));
+  var container=document.getElementById('quiz-opts');
+  container.innerHTML='';
+  opts.forEach(function(opt){
+    var btn=document.createElement('button');
+    btn.className='qopt';
+    btn.dataset.en=opt.en;
+    var ed=document.createElement('div');
+    ed.style.cssText='width:80px;height:80px;display:flex;align-items:center;justify-content:center;font-size:46px;flex-shrink:0;background:'+cat.ac+'18';
+    ed.textContent=opt.e;
+    var td=document.createElement('div');
+    td.style.cssText='flex:1;text-align:left;padding-right:12px';
+    var end=document.createElement('div');
+    end.style.cssText='font-size:22px;color:#2D1B4E;font-family:"Fredoka One",cursive';
+    end.textContent=opt.en;
+    var hed=document.createElement('div');
+    hed.style.cssText='font-size:13px;font-weight:700;color:#7C5EA8;direction:rtl';
+    hed.textContent=opt.he;
+    td.appendChild(end);td.appendChild(hed);
+    var id=document.createElement('div');
+    id.style.cssText='width:40px;text-align:center;font-size:24px;flex-shrink:0';
+    btn.appendChild(ed);btn.appendChild(td);btn.appendChild(id);
+    btn.onclick=function(){chooseOpt(opt,btn);};
+    container.appendChild(btn);
+  });
+  show('s-quiz');
+  setTimeout(function(){speak(curQWord.en);},320);
+}
+
+function playQuizWord(){if(curQWord)speak(curQWord.en);}
+
+function chooseOpt(opt,btn){
+  if(quizLocked)return;quizLocked=true;
+  var correct=(opt.en===curQWord.en);
+  document.querySelectorAll('.qopt').forEach(function(b){
+    if(b.dataset.en===curQWord.en){b.classList.add('correct');b.querySelector('div:last-child').textContent='✅';}
+    else if(b===btn&&!correct){b.classList.add('wrong');b.querySelector('div:last-child').textContent='❌';}
+    else b.classList.add('dim');
+  });
+  if(correct){
+    quizScore++;totalCorrect++;
+    fireConfetti();
+    var msg=rand(PRAISE);
+    document.getElementById('co-msg').textContent=msg;
+    document.getElementById('co-word').textContent=curQWord.en+' = '+curQWord.e;
+    var ov=document.getElementById('cover-overlay');
+    ov.style.display='flex';
+    setTimeout(function(){
+      ov.style.display='none';
+      quizQIdx++;
+      if(quizQIdx<quizBatch.length)showQuizQ();
+      else onQuizDone();
+    },2000);
+  }else{
+    showToast("Try again! 💪","bad",1000);
+    setTimeout(function(){
+      quizLocked=false;
+      document.querySelectorAll('.qopt').forEach(function(b){
+        b.classList.remove('wrong','correct','dim');
+        b.querySelector('div:last-child').textContent='';
+      });
+    },1050);
+  }
+}
+
+function onQuizDone(){
+  var nextIdx=stepIdx+1;
+  if(nextIdx>=steps.length)finishLesson();
+  else{stepIdx=nextIdx;phase="word";renderStep();}
+}
+
+function finishLesson(){
+  progress[curCat.id]=curCat.words.length;
+  document.getElementById('rw-msg').textContent=rand(PRAISE);
+  fireConfetti();show('s-reward');
+}
+
+function showSummary(){
+  var cat=curCat;
+  var total=Math.max(quizCount*3,1);
+  var stars=totalCorrect>=total?3:totalCorrect>=Math.ceil(total*.6)?2:1;
+  document.getElementById('sum-title').textContent=totalCorrect===total?'Perfect lesson! 🎊':'Lesson complete! 🎉';
+  document.getElementById('sum-cat').textContent=cat.icon+' '+cat.label;
+  document.getElementById('sum-score').textContent=totalCorrect+' quiz answers correct ⭐';
+  var starsEl=document.getElementById('sum-stars');starsEl.innerHTML='';
+  for(var i=0;i<3;i++){
+    var s=document.createElement('span');s.textContent='⭐';
+    s.style.cssText='font-size:46px;display:inline-block;'+(i<stars?'animation:starPop .5s '+(i*.2)+'s both':'filter:grayscale(1) opacity(.2)');
+    starsEl.appendChild(s);
+  }
+  var chips=document.getElementById('sum-chips');chips.innerHTML='';
+  cat.words.forEach(function(w){
+    var ch=document.createElement('span');ch.className='chip';
+    ch.style.cssText='background:'+cat.bg+';border:2px solid '+cat.ac+';color:#2D1B4E';
+    ch.textContent=w.e+' '+w.en;chips.appendChild(ch);
+  });
+  document.getElementById('sum-conf').textContent=rand(CONF);
+  var ab=document.getElementById('sum-again');
+  ab.style.background=cat.ac;ab.style.color='#fff';ab.style.boxShadow='0 7px 22px '+cat.ac+'55';
+  buildGrid();updateProgress();show('s-summary');
+}
+
+function playAgain(){startLesson(curCat);}
+function nextLesson(){
+  var i=CATS.findIndex(function(c){return c.id===curCat.id;});
+  startLesson(CATS[(i+1)%CATS.length]);
+}
+</script>
+</body>
+</html>
